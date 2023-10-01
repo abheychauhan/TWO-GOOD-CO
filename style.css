@@ -1,0 +1,477 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+@font-face {
+    font-family: a;
+    src: url(Futura-Bold.woff2);
+}
+*::selection{
+    color: white;
+    background: #000000cc;
+}
+nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.5vw .4vw;
+    padding-right: 2vw;
+    padding-left: 1.5vw;
+    z-index: 99;
+}
+nav .part1{
+    height: 84px;
+    overflow: hidden;
+}
+nav .part1 svg{
+    display: block;
+    margin-bottom: 1px;
+
+}
+nav .part2{
+    display: flex;
+    gap: 2vw;
+}
+nav .part2 .links a{
+    margin-left: 4vw;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 12px;
+    position: relative;
+    padding-bottom: 4px;
+    
+}
+.links a::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    background: #000;
+    transform: scaleX(0);
+    transition: transform ease .4s;
+    transform-origin: right;
+
+}
+.links a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+.links a:hover{
+    opacity: .6;
+}
+
+nav .part2 .icons{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 2vw;
+    padding: 5px 10px;
+    margin-top: -6px;
+    cursor: pointer;
+}
+nav .part2 .icons i{
+    font-size: 20px;
+
+}
+.page1{
+    min-height:100vh ;
+    width: 100%;
+    padding: 0 2vw;
+    padding-top: 15vw;
+
+
+}
+.page1  h1{
+    font-size: 16.2vw;
+    text-transform: uppercase;
+    line-height: 14vw;
+    font-family: a;
+    font-weight:bolder;
+    letter-spacing: -.9vw;
+    text-align: center;
+
+}
+.anim{
+    height: fit-content;
+    width: 100%;
+    overflow: hidden;
+
+}
+.page1 .img{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 2vw;
+}
+.page1 img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    scale: 1.2;
+}
+ .text1{
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+
+}
+.page1 .text h5{
+    font-size: .8vw;
+    font-family: 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+.scroll-speed{
+    z-index: 9;
+    position: absolute;
+    left: 60%;
+    top: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+   height: 11.2vw;
+   width: 11.2vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   z-index: 9;
+
+   
+
+}
+.box svg{
+   animation: rotate linear infinite 10s;
+
+}
+.img{
+    position: relative;
+}
+.img  h3{
+    font-size: 3vw;
+    font-family: a;
+    position: absolute;
+    
+}
+.curved-text{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transform-origin: center;
+    left: 3%;
+    
+
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+            transform: rotate(360deg);
+        }
+}
+
+
+
+.page2{
+    min-height: 100vh;
+    width: 100%;
+}
+.page2 .container{
+    height: 95vh;
+    width: 32%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.cont{
+    display: flex;
+    padding: 1vw 2vw;
+    align-items: center;
+    justify-content: space-between;
+}
+.container img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    scale: 1.3;
+}
+.page2 .container .note{
+    width: 60%;
+    background-color: rgb(248, 222, 189);
+    position: absolute;
+    top: 40%;
+    border-radius: 20px;
+
+
+}
+
+
+
+.page2 .container .note .part1{
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.note .part1 h4{
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+}
+.page2 .container .note .part2{
+    transform-origin: top;
+    transition: transform .3s;
+    display: flex;
+    align-items: center;
+}
+.page2 .container .note .part2 .sec{
+      height: 50%;
+      width: 40%;
+}
+.part2 .sec img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.page2 .container .note:hover .part2{
+    transform-origin: top;
+    border-radius: 20px;
+    height: 100px;
+    background-color:rgb(248, 222, 189);
+    transform: scaleY(1.5);
+
+
+}
+
+.page2 .text{
+    display: flex;
+    justify-content: space-between;
+    padding: 4vw 2vw;
+    padding-right: 10vw;
+}
+
+.page2 .text h3{
+    font-size: 4vw;
+    width: 50vw;
+    font-family: a;
+}
+.page2 .text h4{
+    font-size: 1.2vw;
+    width: 25vw;
+    font-weight: 200;
+    margin-bottom: 4vw;
+    font-family: sans-serif;
+}
+.page2 .text a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+    position: relative;
+    padding-bottom: 9px;
+}
+.page2 .text a::after{
+    content: '';
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    background-color: black;
+    bottom: 0;
+    left: 0%;
+    transform-origin: right;
+}
+.page2 .text a:hover:after{
+    animation: anim .5s linear;
+    transform-origin: left;
+
+}
+@keyframes anim {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+
+
+@media (max-width:800px) {
+    nav .links{
+        display: none;
+    }
+    nav .part1{
+        height: 45px;
+        width: 80px;
+    }
+    nav .part1 svg{
+        display: block;
+        height: 50px;
+        width: 50px;
+        
+            margin-bottom: 16px;
+        
+
+    
+    }
+    nav .part1 #logo{
+        height: 30px;
+        width: 30px;
+
+
+    }
+    .page1{
+        min-height:70vh ;
+        padding: 0 2vw;
+        padding-top: 15vw;
+    
+    
+    }
+   
+    .img  h3{
+        position: absolute;
+        left: 2%;
+    }
+   
+    .box{
+   
+        
+        top: 0%;
+        z-index: 9;
+        animation: none linear infinite 10s;
+        
+     
+     }
+     .scroll-speed{
+        top: -10%;
+
+     }
+
+     .curved-text{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transform-origin: center;
+        left: -51%;
+        
+    
+    } 
+    .page2 .cont{
+        flex-direction: column;
+        gap: 3vw;
+    }
+       .page2 .container{
+        height: 100vh;
+        width: 80%;
+        overflow: hidden;
+        background-color: aqua;
+    }
+    .container img{
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        scale: 1.3;
+    }
+    
+.page2 .text{
+    display: flex;
+    flex-direction: column;
+    padding: 5vw 2vw;
+    padding-right: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.page2 .text h3{
+    font-size: 4vw;
+    width: 100%;
+    font-family: a;
+    text-align: center;
+}
+.page2 .text h4{
+    font-size: 2vw;
+    width: 100%;
+    font-weight: 200;
+    text-align: center;
+    margin-top: 4vw;
+
+
+}
+.page2 .text a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: black;
+    position: relative;
+    padding-bottom: 9px;
+    
+}
+}
+
+
+
+.page3{
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 3vw;
+}
+.page3 .products{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 3vw;
+   padding: 2vw 5vw;
+}
+.page3 .products .items{
+    height: 75vh;
+    width: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.items h5{
+   font-family: sans-serif;
+   font-weight: 100;
+   font-size: 12px;
+   padding-bottom: 10px;
+}
+.products .items img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#text1{
+    margin-top: 10vw;
+}
+#cursor{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    background-color: antiquewhite;
+}
