@@ -429,6 +429,15 @@ nav .part2 .icons i{
     padding-bottom: 9px;
     
 }
+.page3 .products .items{
+    height: 60vh;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
 }
 
 
@@ -447,7 +456,7 @@ nav .part2 .icons i{
 }
 .page3 .products .items{
     height: 60vh;
-    width: 200px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
